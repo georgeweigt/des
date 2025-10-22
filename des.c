@@ -1,4 +1,4 @@
-/* Realization of block encryption standard 3DES
+/* Realization of block encryption standard DES
 
 BSD 2-Clause License
 
