@@ -34,10 +34,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 int
 main()
 {
-	uint8_t K[96];
-	uint8_t a[8], key[8];
-
-	memset(a, 0, 8); // bzero(a, 8);
+	uint8_t a[8], key[8], K[96];
 
 	key[0] = 0x3b;
 	key[1] = 0x38;
@@ -51,6 +48,8 @@ main()
 	des_compute_key_schedule(K, key);
 
 	printf("Testing encryption\n");
+
+	memset(a, 0, 8); // bzero(a, 8);
 
 	des_encrypt(a, K);
 
